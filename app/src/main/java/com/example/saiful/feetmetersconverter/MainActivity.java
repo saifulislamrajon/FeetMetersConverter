@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
                         feet = Integer.parseInt(editText.getText().toString());
                         //double meter= (int) (0.305*feet);
                         double meter = 0.305 * feet;
-                        String m = Double.toString(meter);
+//                        int r=Math.round(meter);
+                        String m = Double.toString(Math.round(meter));
                         tvMeters.setText(m);
                     }catch (Exception e){
                         e.printStackTrace();
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     try{
                         meter = Integer.parseInt(editText.getText().toString());
                         double feet = meter / 0.305;
-                        String f = Double.toString(feet);
+                        String f = Double.toString(Math.round(feet));
                         tvFeet.setText(f);
                     }catch (Exception e){
                         e.printStackTrace();
